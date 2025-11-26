@@ -1,0 +1,262 @@
+/* GLOBAL RESET / BASE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Calibri, Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #eceff1, #fce4ec);
+    padding: 20px;
+}
+
+
+/* MAIN CONTAINER – CARD STYLE */
+
+.resume-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* LEFT SIDE BAR */
+
+.sidebar {
+    flex: 0 0 28%;
+    background: linear-gradient(180deg, #1a237e, #3949ab);
+    color: #fff;
+    padding: 25px 20px 35px 20px;
+}
+
+.sidebar h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.sidebar .tagline {
+    font-size: 0.95em;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.sidebar .contact {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.sidebar .contact a {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+.sidebar .contact a:hover {
+    text-decoration: underline;
+}
+
+.sidebar h3 {
+    font-size: 1em;
+    margin: 15px 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sidebar hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 8px 0 10px 0;
+}
+
+.sidebar ul {
+    list-style-type: square;
+    margin-left: 18px;
+    font-size: 0.9em;
+}
+
+.sidebar .personal-mini {
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+
+/* RIGHT CONTENT AREA */
+
+.content {
+    flex: 0 0 72%;
+    padding: 25px 30px 35px 30px;
+}
+
+
+/* TOP NAV INSIDE CONTENT */
+
+nav {
+    margin-bottom: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background-color: #e3f2fd;
+    text-decoration: none;
+    font-size: 0.88em;
+    color: #1a237e;
+    transition: 0.2s;
+}
+
+
+/* Active and hover from JS */
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #1a237e;
+    color: #fff;
+}
+
+
+/* Click animation */
+
+nav ul li a.active-click {
+    transform: scale(1.08);
+    transition: 0.2s;
+}
+
+
+/* SECTION STYLING */
+
+section {
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #ddd;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h2 {
+    font-size: 1.2em;
+    color: #1a237e;
+    margin-bottom: 6px;
+}
+
+section p {
+    font-size: 0.95em;
+}
+
+
+/* ARTICLES / SUBCARDS */
+
+article {
+    margin-top: 6px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    border: 1px solid #eeeeee;
+}
+
+article h3 {
+    font-size: 1.02em;
+    margin-bottom: 4px;
+    color: #283593;
+}
+
+article ul {
+    margin-left: 18px;
+    font-size: 0.93em;
+}
+
+
+/* TABLES */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 0.9em;
+}
+
+th,
+td {
+    border: 1px solid #e0e0e0;
+    padding: 6px 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f5f5f5;
+}
+
+
+/* PERSONAL DETAILS TABLE */
+
+.personal-table th {
+    width: 30%;
+}
+
+
+/* DECLARATION */
+
+.declaration {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #555;
+}
+
+
+/* DOWNLOAD BUTTON (if used) */
+
+.download-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: #ffeb3b;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #fff59d;
+    transform: scale(1.05);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .resume-container {
+        flex-direction: column;
+    }
+    .sidebar,
+    .content {
+        flex: 0 0 100%;
+    }
+}
